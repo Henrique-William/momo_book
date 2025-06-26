@@ -32,7 +32,7 @@ public class TokenController {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @PostMapping("api/auth/login")
+    @PostMapping("/api/auth/login")
     public ResponseEntity<LoginResponseDto> login(@RequestBody LoginRequestDto loginRequest) {
 
         var user = userRepository.findByEmail(loginRequest.email());
